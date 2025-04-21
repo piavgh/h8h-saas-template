@@ -22,7 +22,7 @@ export default function CheckoutPage() {
 
       try {
         // Call Polar API to create a checkout session
-        const response = await fetch(`/api/checkout?products=${productId}`);
+        const response = await fetch(`/api/checkout?productId=${productId}`);
         
         if (!response.ok) {
           const errorData = await response.json();

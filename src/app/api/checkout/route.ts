@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
   try {
     // Get the product ID from the query parameters
     const { searchParams } = new URL(request.url);
-    const productId = searchParams.get('products') || searchParams.get('productId');
+    const productId = searchParams.get('productId');
 
     if (!productId) {
       return NextResponse.json({ error: 'Missing product ID in query params' }, { status: 400 });
